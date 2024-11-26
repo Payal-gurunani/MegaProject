@@ -2,7 +2,7 @@ import  React, { useEffect,useState } from 'react'
 import './App.css'
 import { useDispatch } from 'react-redux';
 import authService from './appwrite/Auth'
-import {login ,logOut} from "./Store/authSlice"
+import {login ,logout} from "./Store/authSlice"
 import { Footer, Header } from './components';
 // import { Outlet } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ function App() {
         diapatch(login(userData))
       }
       else{
-        diapatch(logOut())
+        diapatch(logout())
       }
     })
     .finally(() => setLoading(false))
